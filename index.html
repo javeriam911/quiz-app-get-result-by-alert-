@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset {
+            border-color: rebeccapurple;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .quiz {
+            font-size: 30px;
+            font-family: cursive;
+        }
+
+        body {
+            background-color: blanchedalmond;
+        }
+
+        .btn {
+            margin-left: 45%;
+            background-color: aqua;
+            border-radius: 13px;
+            border-color: rgb(102, 51, 153);
+        }
+
+        h1 {
+            margin: left 10px;
+            ;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <fieldset>
+        <h1 class="quiz"> Quiz Application</h1>
+    </fieldset>
+    <br>
+    <div>
+        <fieldset>
+            <p class="quiz">
+                Q:1- What is 2 + 15 = ?
+            </p>
+
+            <div class="quiz">
+                <input name="maths_question" id="q_1-a1" type="radio"> 17 </input>
+            </div>
+            <br>
+            <div class="quiz">
+                <input name="maths_question" id="q_1-a2" type="radio"> 18 </input>
+            </div>
+            <br>
+            <div class="quiz">
+                <input name="maths_question" id="q_1-a3" type="radio"> 19 </input>
+            </div>
+            <br>
+            <div class="quiz">
+                <input name="maths_question" id="q_1-a4" type="radio"> 23 </input>
+            </div>
+            <br>
+
+
+
+        </fieldset>
+    </div>
+
+    <br>
+    <div>
+        <fieldset>
+            <p class="quiz">
+                Q:2- What is the name of President of America ?
+            </p>
+
+            <div class="quiz">
+                <input name="general_knowledge" id="q_2-a1" type="radio">Joe Biden </input>
+            </div>
+            <br>
+            <div class="quiz">
+                <input name="general_knowledge" id="q_2-a2" type="radio"> Donald Trump </input>
+            </div>
+            <br>
+            <div class="quiz">
+                <input name="general_knowledge" id="q_2-a3" type="radio"> Barack Obama </input>
+            </div>
+            <br>
+            <div class="quiz">
+                <input name="general_knowledge" id="q_2-a4" type="radio"> Hillary clinton </input>
+            </div>
+            <br>
+
+        </fieldset>
+    </div>
+    <br>
+    <div>
+        <fieldset>
+            <p class="quiz">
+                Q:3- How many prayers does a Muslim has to pray in a day ?
+            </p>
+
+            <div class="quiz">
+                <input name="islamic_ques" id=" q_3-a1" type="radio">Four </input>
+            </div>
+            <br>
+            <div class="quiz">
+                <input name="islamic_ques" id="q_3-a2" type="radio">Eight</input>
+            </div>
+            <br>
+            <div class="quiz">
+                <input name="islamic_ques" id="q_3-a3" type="radio"> Five</input>
+            </div>
+            <br>
+            <div class="quiz">
+                <input name="islamic_ques" id="q_3-a4" type="radio"> Three</input>
+            </div>
+            <br>
+
+
+        </fieldset>
+    </div>
+    <br>
+    <span> <button onclick="check()" class="btn quiz">submit answer</button></span>
+</body>
+<script>
+    function check() {
+        let result = document.getElementById("result")
+
+        let score = 0
+        let q_1ans_1 = document.getElementById('q_1-a1');
+        let q1_ans_2 = document.getElementById('q_1-a2');
+        let q1_ans_3 = document.getElementById('q_1-a3');
+        let q1_ans_4 = document.getElementById('q_1-a4');
+        if (q_1ans_1.checked == true) {
+            score++
+            alert('Q:1right answer')
+        }
+        else (alert('Q:1incorrect answer'))
+
+
+
+        let q_2ans1 = document.getElementById("q_2-a1")
+        let q_2ans2 = document.getElementById("q_2-a2")
+        let q_2ans3 = document.getElementById("q_2-a3")
+        let q_2ans4 = document.getElementById("q_2-a4")
+
+        if (q_2ans1.checked == true) {
+            score++
+            alert("Q:2 right answer");
+        }
+        else (alert('Q:2  incorrect answer'))
+
+
+        let q_3ans1 = document.getElementById("q_3-a1")
+        let q_3ans2 = document.getElementById("q_3-a2")
+        let q_3ans3 = document.getElementById("q_3-a3")
+        let q_3ans4 = document.getElementById("q_3-a4")
+
+        if (q_3ans3.checked == true) {
+            score++
+
+            alert(" Q:3 right answer")
+
+
+        }
+        else (alert('Q:3 incorrect answer'))
+
+
+
+
+
+        alert("your score is " + score++)
+
+    }
+
+
+
+</script>
+
+</html>
